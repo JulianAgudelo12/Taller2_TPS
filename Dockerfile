@@ -1,18 +1,21 @@
-# Minimal Dockerfile for your current app
-
+# Usa una imagen oficial de Node.js
 FROM node:18-alpine
 
-WORKDIR /app
+# Crea y usa el directorio de trabajo dentro del contenedor
+WORKDIR /usr/src/app
 
-# Copy dependency definitions and install them
+# Copia los archivos de dependencias primero
 COPY package*.json ./
-RUN npm install --production
 
-# Copy the rest of the code
+# Instala solo las dependencias de producción
+RUN npm install 
+
+# Copia todo el resto del código al contenedor
 COPY . .
 
-# Expose the port used in app.js
-EXPOSE 3000
+# Expone el puerto 3000 (ajusta si tu app usa otro)
+EXPOSE 8080
 
-# Start the server
+# Comando para arrancar tu app
 CMD ["node", "src/app.js"]
+
