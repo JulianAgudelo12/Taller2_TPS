@@ -66,7 +66,7 @@ pokeneas = [
     {
         id: "Jigglypuff",
         name: "Fairy",
-        height: 0.5,
+        height: 0.6,
         Abilities: "Cute Charm",
         image: "/jigglypuff.png",
         phrase: "Jigglypuff",
