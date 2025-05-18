@@ -1,9 +1,13 @@
 const pokeneas = require('../data/pokeneas');
+const { getPokemonData, getPokemonImageAndPhrase } = require('../utils/random');
 const os = require('os');
 
 exports.getRandom = (req, res) => {
-  const number = Math.floor(Math.random() * pokeneas.length);
-  const { id, name, height, abilities } = pokeneas[number];
+  const data = getPokemonData();
+  res.json({ ...data, containerId: os.hostname() });
+};
 
-  res.json({ id, name, height, abilities, containerId: os.hostname() });
+exports.getImgPhrase = (req, res) => {
+  const data = getPokemonImageAndPhrase();
+  res.json({ ...data, containerId: os.hostname() });
 };

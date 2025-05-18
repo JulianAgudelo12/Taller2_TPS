@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PokeWisdom</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+    img {
+      max-height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="phrase">Loading wisdom...</h1>
+  <img id="pokemonImage" src="" alt="Pokemon" />
+  <p id="pokemonName"></p>
+
+  <button onclick="loadCombo()">Get more wisdom</button>
+
+  <script>
+    async function loadCombo() {
+      const response = await fetch('/api/pokeneas/random-phrase');
+      const data = await response.json();
+      document.getElementById('phrase').textContent = data.phrase;
+      document.getElementById('pokemonImage').src = data.image;
+    }
+
+    loadCombo();
+  </script>
+</body>
+</html>

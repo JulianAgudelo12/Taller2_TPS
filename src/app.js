@@ -6,10 +6,15 @@ const pokeneasRoutes = require('./routes/pokeneas');
 
 
 app.use(express.static(path.join(__dirname, '..', 'public'))); 
+
 app.use('/api/pokeneas', pokeneasRoutes);
 
 app.get('/', (req, res) => {
-    res.send('Hello World');
+    res.send("Welcome to the Pokeneas' app");
+});
+
+app.get('/pokewisdom', (req, res) => {
+    res.redirect('/phraseImage.html');
 });
 
 app.listen(port, () => {
