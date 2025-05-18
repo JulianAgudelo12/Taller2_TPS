@@ -17,7 +17,7 @@
 <body>
   <h1 id="phrase">Loading wisdom...</h1>
   <img id="pokemonImage" src="" alt="Pokemon" />
-  <p id="pokemonName"></p>
+  <p id="containerId"></p>
 
   <button onclick="loadCombo()">Get more wisdom</button>
 
@@ -27,6 +27,7 @@
       const data = await response.json();
       document.getElementById('phrase').textContent = data.phrase;
       document.getElementById('pokemonImage').src = data.image;
+      document.getElementById('containerId').textContent = `Container: ${data.containerId}`;
     }
 
     loadCombo();
