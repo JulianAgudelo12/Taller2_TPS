@@ -4,7 +4,7 @@ pokeneas = [
         name: "Pikachu",
         height: 0.4,
         abilities: "Static",
-        image: "/images/pikachu.png",
+        image: "https://pokeneas1905.s3.us-east-1.amazonaws.com/pikachu.png",
         phrase: "The unexamined life is not worth living.",
     },
     {
@@ -12,7 +12,7 @@ pokeneas = [
         name: "Charmander",
         height: 0.6,
         abilities: "Blaze",
-        image: "/images/charmander.png",
+        image: "https://pokeneas1905.s3.us-east-1.amazonaws.com/charmander.png",
         phrase: "Happiness depends upon ourselves.",
     },
     {
@@ -20,7 +20,7 @@ pokeneas = [
         name: "Bulbasaur",
         height: 0.7,
         abilities: "Overgrow",
-        image: "/images/bulbasaur.png",
+        image: "https://pokeneas1905.s3.us-east-1.amazonaws.com/bulbasaur.png",
         phrase: "I think, therefore I am.",
     },
     {
@@ -28,7 +28,7 @@ pokeneas = [
         name: "Squirtle",
         height: 0.5,
         abilities: "Torrent",
-        image: "/images/squirtle.png",
+        image: "https://pokeneas1905.s3.us-east-1.amazonaws.com/squirtle.png",
         phrase: "He who has a why to live can bear almost any how.",
     },
     {
@@ -36,7 +36,7 @@ pokeneas = [
         name: "Caterpie",
         height: 0.3,
         abilities: "Shield Dust",
-        image: "/images/caterpie.png",
+        image: "https://pokeneas1905.s3.us-east-1.amazonaws.com/caterpie.png",
         phrase: "Man is condemned to be free.",
     },
     {
@@ -44,7 +44,7 @@ pokeneas = [
         name: "Nidoking",
         height: 1.4,
         abilities: "Poison Point",
-        image: "/images/nidoking.png",
+        image: "https://pokeneas1905.s3.us-east-1.amazonaws.com/nidoking.png",
         phrase: "The only true wisdom is in knowing you know nothing.",
     },
     {
@@ -52,7 +52,7 @@ pokeneas = [
         name: "Nidoqueen",
         height: 1.3,
         abilities: "Poison Point",
-        image: "/images/nidoqueen.png",
+        image: "https://pokeneas1905.s3.us-east-1.amazonaws.com/nidoqueen.png",
         phrase: "Life must be understood backward. But it must be lived forward.",
     },  
     {
@@ -60,7 +60,7 @@ pokeneas = [
         name: "Clefairy",
         height: 0.6,
         abilities: "Cute Charm",
-        image: "/images/clefairy.png",
+        image: "https://pokeneas1905.s3.us-east-1.amazonaws.com/clefairy.png",
         phrase: "You only live once, but if you do it right, once is enough.",
     },
     {
@@ -68,7 +68,7 @@ pokeneas = [
         name: "Jigglypuff",
         height: 0.6,
         abilities: "Cute Charm",
-        image: "/images/jigglypuff.png",
+        image: "https://pokeneas1905.s3.us-east-1.amazonaws.com/jigglypuff.png",
         phrase: "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
     },
     {
@@ -76,7 +76,7 @@ pokeneas = [
         name: "Wigglytuff",
         height: 1.0,
         abilities: "Cute Charm",
-        image: "/images/wigglytuff.png",
+        image: "https://pokeneas1905.s3.us-east-1.amazonaws.com/wigglytuff.png",
         phrase: "Liberty consists in doing what one desires.",
     },
 ]   

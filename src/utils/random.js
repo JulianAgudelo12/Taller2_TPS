@@ -1,11 +1,14 @@
-const pokemons = require('../data/pokeneas');
+const pokemons = require('../models/pokeneasData');
 
 function getRandomItem(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 
 function getRandomPokemon() {
-  return getRandomItem(pokemons);
+  const data = getRandomItem(pokemons);
+  const pokenea = new Pokenea(data);
+
+  return pokenea.toJSON();
 }
 
 function getPokemonData() {
