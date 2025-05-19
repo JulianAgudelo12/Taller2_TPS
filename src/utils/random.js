@@ -1,27 +1,34 @@
-const pokemons = require('../models/pokeneasData');
+const pokeneas = require('../models/pokeneasData');
+const os = require('os');
 
 function getRandomItem(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 
-function getRandomPokemon() {
-  const data = getRandomItem(pokemons);
-  const pokenea = new Pokenea(data);
+function getRandomPokenea() {
+  const pokenea = getRandomItem(pokeneas);
 
-  return pokenea.toJSON();
+  return{
+    id: pokenea.id, 
+    name: pokenea.name, 
+    hliteight: pokenea.height, 
+    abiies: pokenea.abilities,
+    containerId: os.hostname()
+  };
 }
 
-function getPokemonData() {
-  const { id, name, height, abilities } = getRandomPokemon();
-  return { id, name, height, abilities };
-}
 
-function getPokemonImageAndPhrase() {
-  const { image, phrase } = getRandomPokemon();
-  return { image, phrase };
+function getRandomPokeneaImageAndPhrase() {
+  const pokenea = getRandomPokenea(pokeneas);
+  
+  return { 
+    image: pokenea.image, 
+    phrase: pokenea.phrase,
+    containerId: os.hostname()
+  };
 }
 
 module.exports = {
-  getPokemonData,
-  getPokemonImageAndPhrase
+  getRandomPokenea,
+  getRandomPokeneaImageAndPhrase
 };

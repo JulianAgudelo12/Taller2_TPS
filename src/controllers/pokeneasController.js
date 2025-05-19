@@ -1,13 +1,20 @@
 const Pokenea = require('../models/pokeneas');
-const { getPokemonData, getPokemonImageAndPhrase } = require('../utils/random');
-const os = require('os');
+const { getRandomPokenea, getRandomPokeneaImageAndPhrase } = require('../utils/random');
 
-exports.getRandom = (req, res) => {
-  const pokenea = getPokemonData();
+
+getRandom = (req, res) => {
+  const pokenea = getRandomPokenea();
   return res.json(pokenea);
 };
 
-exports.getImgPhrase = (req, res) => {
-  const pokenea = getPokemonImageAndPhrase();
-  return res.json(pokenea);
+getImgPhrase = (req, res) => {
+  const pokenea = getRandomPokeneaImageAndPhrase();
+  return res.render('/phraseImage.html', pokenea);
 };
+
+module.exports = {
+  getRandom,
+  getImgPhrase
+};
+
+

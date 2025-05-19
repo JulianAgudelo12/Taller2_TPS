@@ -1,4 +1,3 @@
-// models/Pokenea.js
 
 /**
  * @class Pokenea

@@ -1,9 +1,16 @@
 // src/routes/pokeneas.js
 const express = require('express');
-const { getRandom, getImgPhrase } = require('../controllers/pokeneasController');
 const router = express.Router();
+const { getRandom, getImgPhrase } = require('../controllers/pokeneasController');
 
-router.get('/random-info', getRandom);
-router.get('/random-phrase', getImgPhrase);
+
+//Home page
+router.get('/', (req, res) => {
+    res.send("Welcome to the Pokeneas' app");
+});
+
+//Pokeneas routes
+router.get('/pokeneas/randomInfo', getRandom);
+router.get('/pokeneas/randomPhrase', getImgPhrase);
 
 module.exports = router;
