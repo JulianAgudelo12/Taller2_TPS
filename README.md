@@ -86,9 +86,8 @@ Taller2_TPS/
 
 4. **Accede a la API** en tu navegador, Postman o Curl:
 
-   * Pokénea aleatorio: [http://localhost:80/api/pokeneas/random-info](http://localhost:80/api/pokeneas/random-info) (Formato JSON)
-   * Frase con imágen Pokénea aleatoria [http://localhost:80/api/pokeneas/random-phrase](http://localhost:80/api/pokeneas/random-phrase) (Formato JSON)
-   * Frase con imágen Pokénea aleatoria [http://localhost:80/pokewisdom](http://localhost:80/pokewisdom) (Vista)
+   * Pokénea aleatorio: [http://localhost:80/pokeneas-json](http://localhost:80/pokeneas-json) (Formato JSON)
+   * Frase con imágen Pokénea aleatoria [http://localhost:80/pokeneas-phrase](http://localhost:80/pokeneas-phrase) (Vista)
 
 ---
 
