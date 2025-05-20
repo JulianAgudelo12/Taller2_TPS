@@ -1,4 +1,4 @@
-const Pokenea = require('../models/pokeneas');
+const Pokenea = require('../models/Pokeneas');
 const { getRandomPokenea, getRandomPokeneaImageAndPhrase } = require('../utils/random');
 
 
