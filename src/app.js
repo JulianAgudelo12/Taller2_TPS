@@ -1,17 +1,19 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = 80;
+
+const { PORT } = process.env;
 const pokeneasRoutes = require('./routes/pokeneas');
 
 
 app.use(express.static(path.join(__dirname, '..', 'public'))); 
-app.use('/api/pokeneas', pokeneasRoutes);
 
-app.get('/', (req, res) => {
-    res.send('Hello World');
-});
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
-app.listen(port, () => {
-    console.log(`Server is running on port http://localhost:${port}`);
+app.use(pokeneasRoutes);
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port http://localhost:${PORT}`);
 });
