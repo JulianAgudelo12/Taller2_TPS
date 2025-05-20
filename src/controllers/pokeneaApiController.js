@@ -14,7 +14,11 @@ getRandom = (req, res) => {
 getImgPhrase = (req, res) => {
   try {
     const pokenea = getRandomPokeneaImageAndPhrase();
-    return res.json(pokenea);
+    return res.render('index', {
+      image: pokenea.image,
+      phrase: pokenea.phrase,
+      containerId: pokenea.containerId,
+    });
   } catch (error) {
     res.status(500).json({error: 'Internal Server Error'})
   }
