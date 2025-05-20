@@ -33,8 +33,7 @@ Taller2_TPS/
 ├── public/                   # Archivos públicos/estáticos (imágenes, CSS, JS)
 ├── src/                      # Código fuente principal
 │   ├── controllers/          # Controladores de lógica para API y vistas
-│   │   ├── pokeneaApiController.js
-│   │   └── viewController.js
+│   │   └── pokeneaApiController.js
 │   ├── models/               # Definición de modelos de datos
 │   │   ├── Pokeneas.js
 │   │   └── pokeneasData.js
@@ -131,7 +130,7 @@ Taller2_TPS/
    ```
 
 7. **Accede a la API desde tu navegador:**
-   [http://\<IP\_PUBLICA\_DE\_TU\_EC2>/api/pokeneas/random](http://<IP_PUBLICA_DE_TU_EC2>/api/pokeneas/random)
+   [http://\<IP\_PUBLICA\_DE\_TU\_EC2>/](http://<IP_PUBLICA_DE_TU_EC2>/)
 
 ---
 
