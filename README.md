@@ -29,20 +29,30 @@ La aplicación sigue una estructura clara y modular para facilitar el mantenimie
 
 Taller2_TPS/
 ├── .github/                  # Workflows de GitHub Actions
-├── node\_modules/             # Dependencias de Node.js
-├── public/                   # Archivos públicos/estáticos (imágenes, etc.)
+├── node_modules/             # Dependencias de Node.js
+├── public/                   # Archivos públicos/estáticos (imágenes, CSS, JS)
 ├── src/                      # Código fuente principal
-│   ├── controllers/          # Controladores de rutas
-│   │   └── pokeneasController.js
-│   ├── data/                 # Datos estáticos de Pokéneas
-│   │   └── pokeneas.js
+│   ├── controllers/          # Controladores de lógica para API y vistas
+│   │   ├── pokeneaApiController.js
+│   │   └── viewController.js
+│   ├── models/               # Definición de modelos de datos
+│   │   ├── Pokeneas.js
+│   │   └── pokeneasData.js
 │   ├── routes/               # Definición de rutas Express
-│   │   └── pokeneas.js
+│   │   ├── pokeneas.js       # Rutas para API y vistas (se recomienda separar)
+│   ├── utils/                # Funciones utilitarias compartidas
+│   │   └── random.js
+│   ├── views/                # Vistas EJS
+│   │   └── index.ejs
 │   └── app.js                # Punto de entrada de la aplicación
-├── Dockerfile                # Configuración para imagen Docker
-├── package.json              # Configuración de dependencias y scripts
-├── package-lock.json         # Control de versiones de dependencias
-└── README.md                 # Documentación del proyecto
+├── .env                      # Variables de entorno (local)
+├── .env.example              # Plantilla de variables de entorno
+├── .gitignore                # Archivos ignorados por Git
+├── Dockerfile                # Configuración para contenedor Docker
+├── package.json              # Dependencias, scripts y metadatos del proyecto
+├── package-lock.json         # Versión exacta de dependencias instaladas
+└── README.md                 # Documentación general del proyecto
+
 
 ```
 
@@ -76,13 +86,15 @@ Taller2_TPS/
 
 4. **Accede a la API** en tu navegador, Postman o Curl:
 
-   * Pokénea aleatorio: [http://localhost:80/api/pokeneas/random](http://localhost:80/api/pokeneas/random)
+   * Pokénea aleatorio: [http://localhost:80/api/pokeneas/random-info](http://localhost:80/api/pokeneas/random-info) (Formato JSON)
+   * Frase con imágen Pokénea aleatoria [http://localhost:80/api/pokeneas/random-phrase](http://localhost:80/api/pokeneas/random-phrase) (Formato JSON)
+   * Frase con imágen Pokénea aleatoria [http://localhost:80/pokewisdom](http://localhost:80/pokewisdom) (Vista)
 
 ---
 
 ## ☁️ Despliegue en AWS EC2 con Docker Swarm
 
-> ⚙️ **Nota:** La imagen Docker se construye y publica automáticamente en Docker Hub a través de GitHub Actions cada vez que hay cambios en el repositorio.
+> ⚙️ **Nota:** La imagen Docker se construye y actualiza automáticamente en Docker Hub a través de GitHub Actions cada vez que hay cambios en el repositorio.
 
 1. **Lanza una instancia EC2** (Ubuntu o Amazon Linux recomendado).
 
@@ -110,7 +122,7 @@ Taller2_TPS/
    ```
 
    * Esto lanzará 3 réplicas de la aplicación y la expondrá en el puerto 80 del host.
-   * Puedes ajustar la cantidad de réplicas según tu necesidad.
+   * Puedes ajustar la cantidad de réplicas y el puerto según tu necesidad.
 
 6. **Verifica el estado del servicio:**
 
