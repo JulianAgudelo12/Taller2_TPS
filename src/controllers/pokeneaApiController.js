@@ -14,7 +14,7 @@ getRandom = (req, res) => {
 getImgPhrase = (req, res) => {
   try {
     const pokenea = getRandomPokeneaImageAndPhrase();
-    return res.json(pokenea);
+      return res.render('index', pokenea);
   } catch (error) {
     res.status(500).json({error: 'Internal Server Error'})
   }
@@ -24,5 +24,4 @@ module.exports = {
   getRandom,
   getImgPhrase
 };
-
 
