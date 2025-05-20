@@ -8,7 +8,7 @@ COPY package*.json ./
 RUN npm install 
 
 # Copia archivo de variables de entorno
-COPY .env .env
+COPY .env.example .env
 
 # Copia el resto del código
 COPY . .
