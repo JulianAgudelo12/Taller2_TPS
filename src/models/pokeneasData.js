@@ -1,4 +1,4 @@
-const Pokenea = require('./Pokeneas');
+const Pokenea = require('./pokeneas');
 const { AWS_BASE_URL } = process.env;
 
 pokeneas = [
