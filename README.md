@@ -116,10 +116,13 @@ Taller2_TPS/
 5. **Despliega el servicio usando la imagen de Docker Hub:**
 
    ```bash
-   sudo docker service create --name pokeneas --replicas 3 -p 80:80 jac1234desu/express-pokeneas:latest
+   sudo docker service create --name pokeneas --replicas 10 -p 80:80 \
+   --env AWS_BASE_URL=<your_aws_base_url> \
+   --env PORT=<your_app_port> \
+   jac1234desu/express-pokeneas:latest
    ```
 
-   * Esto lanzará 3 réplicas de la aplicación y la expondrá en el puerto 80 del host.
+   * Esto lanzará 10 réplicas de la aplicación y la expondrá en el puerto 80 del host.
    * Puedes ajustar la cantidad de réplicas y el puerto según tu necesidad.
 
 6. **Verifica el estado del servicio:**
@@ -130,7 +133,9 @@ Taller2_TPS/
    ```
 
 7. **Accede a la API desde tu navegador:**
-   [http://\<IP\_PUBLICA\_DE\_TU\_EC2>/](http://<IP_PUBLICA_DE_TU_EC2>/)
+   * home: [http://\<IP\_PUBLICA\_DE\_TU\_EC2>/](http://<IP_PUBLICA_DE_TU_EC2>/)
+   * Pokénea aleatorio: [http://<IP\_PUBLICA\_DE\_TU\_EC2>/pokeneas-json](http://<IP\_PUBLICA\_DE\_TU\_EC2>/pokeneas-json) 
+   * Frase con imágen Pokénea aleatoria [http://<IP\_PUBLICA\_DE\_TU\_EC2>/pokeneas-phrase](http://<IP\_PUBLICA\_DE\_TU\_EC2>/pokeneas-phrase) 
 
 ---
 
