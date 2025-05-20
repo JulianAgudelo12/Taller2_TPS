@@ -19,7 +19,7 @@ function getRandomPokenea() {
 
 
 function getRandomPokeneaImageAndPhrase() {
-  const pokenea = getRandomPokenea(pokeneas);
+  const pokenea = getRandomItem(pokeneas);
   
   return { 
     image: pokenea.image, 
